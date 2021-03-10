@@ -38,7 +38,7 @@ Router.get('/random',(req,res)=>{
 
 
 //Create a new Movie
-Router.get('/create', (req, res) => {
+Router.post('/create', (req, res) => {
     var decoded = jwt_decode(req.headers.token);
     if (decoded.aud.includes('admin')) {
         try {
